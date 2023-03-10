@@ -19,15 +19,15 @@ let squadre = [
 let punteggi = [
     {
         'nome': 'Hotel',
-        
+        'falli': 0,
     },
     {
         'nome': 'Bravo',
-        
+        'falli': 0,
     },
     {
         'nome': 'Charlie',
-        
+        'falli': 0,
     },
 ]
 
@@ -35,8 +35,16 @@ squadre.forEach((elemento) => {
     let {punti , falli} = elemento;
     punti = Math.floor(Math.random()*10);
     falli = Math.floor(Math.random()*10);
-    punteggi.push({'falli':falli});
+    elemento.falli = falli;
+    elemento.punti = punti;
 });
+console.log(squadre);
+
+punteggi.forEach((elemento) => {
+    let {falli} = elemento;
+    falli = squadre.falli;  
+    elemento.falli = falli;
+    });  
 
 console.log(punteggi);
 
