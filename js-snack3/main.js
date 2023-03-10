@@ -13,3 +13,6 @@ function calcolo(arraynumeri,a,b){
         }
     });
 }
+
+
+/*Esercizio non completato*/
