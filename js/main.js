@@ -9,19 +9,17 @@ let biciclette = [
     },
 ]
     let pesocheck = 1000;
-    let bicipiuleggera;
-    let nomebici;
 
 biciclette.forEach((elemento) => {
     const {nome,peso} = elemento;
     if(peso < pesocheck){
-        bicipiuleggera = peso;
         pesocheck = peso;
-        nomebici = nome;
+        let bici = document.getElementById('bici');
+        bici.innerHTML = (`${peso} ${nome}`)
     }
 });
 
-console.log(`${bicipiuleggera} ${nomebici}`);
+
 
 
 
