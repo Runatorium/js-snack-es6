@@ -40,11 +40,11 @@ squadre.forEach((elemento) => {
 });
 console.log(squadre);
 
-punteggi.forEach((elemento) => {
+punteggi.forEach((elemento,index) => {
     let {falli} = elemento;
-    falli = squadre.falli;  
+    falli = squadre[index].falli;  
     elemento.falli = falli;
-    });  
+});  
 
 console.log(punteggi);
 
